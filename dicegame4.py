@@ -73,4 +73,19 @@ else:
                 print("You chose to stop. Final dice:", mylist)
                 print(f"Your final total is {total}.")
                 break
-        
+        #If one die is different
+        else:  
+        #This will print the die that's not the same as the others and ask them to reoll the dice that's different
+            print(f"The die with the value of {diff_result[0]} is different from the other two dice!")
+            go_again = input("Do you want to reroll the different die? (y/n) ")
+            if go_again.lower() == "y":
+                #Reroll the different die
+                mylist[diff_result[1]] = random.randint(1, 6)
+                total = sum(mylist)  
+                #Recalculate the total
+                print("After reroll:", mylist)
+            else:
+            #The user doesn't want to reroll this will present their total and stop
+                print("No more rerolls. Final dice:", mylist)
+                print(f"Your final total is {total}.")
+                break
