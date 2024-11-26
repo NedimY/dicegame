@@ -15,7 +15,24 @@ def roll():
     dice3 = random.randint(1, 6)
     return [dice1, dice2, dice3]
 
-
+# Function to find the die that is different
+def difference(dicelist):
+    #ex.(3,3,3)
+    if dicelist[0] == dicelist[1] == dicelist[2]:  
+        return 0
+    #ex.(3,3,5)
+    elif dicelist[0] == dicelist[1]:  
+        return dicelist[2], 2
+    #ex.(3,2,3)
+    elif dicelist[0] == dicelist[2]:  
+        return dicelist[1], 1
+    #ex.(1,3,3)
+    elif dicelist[1] == dicelist[2]:  
+        return dicelist[0], 0
+    # If all three dice are different
+    #ex.(3,2,1)
+    else:  
+        return "different_dice", dicelist
 
 # Roll the dice and calculate results
 mylist = roll()
