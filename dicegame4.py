@@ -8,12 +8,7 @@ else:
     print("An error occurred, goodbye!")
     quit()
 
-# Function to roll three dice
-def roll():
-    dice1 = random.randint(1, 6)
-    dice2 = random.randint(1, 6)
-    dice3 = random.randint(1, 6)
-    return [dice1, dice2, dice3]
+
 
 # Function to find the die that is different
 def difference(dicelist):
