@@ -5,7 +5,7 @@ First the program implements the library random so that it can help them when it
 The code starts with welcoming the player to my game and asking them to press 1 to play.
 When the user enters 1 it will start rolling their die. If they press anything other than 1 then the program will show an error and quit on them.
 I defined the variable roll which is where I have the 3 differnt dice that will randomly generate a number 1-6 for each.
-I also created a variable named difference which will spot the number that's different among the 3 dice. This will help in making the other two numbers fixed and giving the user a chance to only roll the number that's different.
+I also defined a function named difference which will spot the number that's different among the 3 dice. This will help in making the other two numbers fixed and giving the user a chance to only roll the number that's different.
 I then accounted for every condition that the dice wil produce and what it will return if the condition is met.
 The empty list "Mylist" will store all the numbers that the dice produce and show in the termianl the numbers the user got and add up their total.
 If the numbers that the user got are all the same then they recieve zero points and their turn ends and they cannot reroll.
