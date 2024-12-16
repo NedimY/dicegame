@@ -1,5 +1,4 @@
-import random
-#importing numpy 
+import random 
 import numpy as np
 
 # Asking the user if they want to play a dice game
@@ -41,6 +40,9 @@ mylist = roll()
 print("First roll:", mylist)
 total = sum(mylist)
 
+#Using numpy to calculate the total
+total = np.sum(mylist)
+
 # Check if all dice are the same
 if difference(mylist) == 0:
     print("You have tupled out and have ZERO points!")
@@ -65,7 +67,7 @@ else:
             #Reroll all dice
                 mylist = roll()  
                 #Recalculate the total
-                total = sum(mylist)  
+                total = np.sum(mylist)  
                 #Print the reroll from the list
                 print("After reroll:", mylist)
                 # Continue the game
@@ -83,8 +85,9 @@ else:
             if go_again.lower() == "y":
                 #Reroll the different die
                 mylist[diff_result[1]] = random.randint(1, 6)
-                total = sum(mylist)  
+                  
                 #Recalculate the total
+                total = np.sum(mylist)
                 print("After reroll:", mylist)
             else:
             #The user doesn't want to reroll this will present their total and stop
