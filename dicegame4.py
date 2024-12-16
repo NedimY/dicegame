@@ -1,6 +1,5 @@
-import random 
+import random
 import numpy as np
-
 # Asking the user if they want to play a dice game
 play_dice = input("Hello, welcome to my dice game! Press 1 to play! ")
 if play_dice == "1":
