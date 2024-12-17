@@ -73,12 +73,15 @@ else:
                 total = np.sum(mylist)  
                 #Print the reroll from the list
                 print("After reroll:", mylist)
+                  
                 # Continue the game
                 continue  
             #If the user decides to stop playing the game
             else:
                 print("You chose to stop. Final dice:", mylist)
                 print(f"Your final total is {total}.")
+                #Shows time of when the game ended
+                print("Game ended at:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
                 break
         #If one die is different
         else:  
@@ -92,7 +95,7 @@ else:
                 #Recalculate the total using numpy
                 total = np.sum(mylist)
                 print("After reroll:", mylist)
-                print("Reroll time:", time.strftime("%H:%M:%S", time.localtime()))  # Log reroll time
+                
             else:
             #The user doesn't want to reroll this will present their total and stop
                 print("No more rerolls. Final dice:", mylist)

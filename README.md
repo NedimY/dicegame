@@ -8,8 +8,10 @@ I defined the variable roll which is where I have the 3 differnt dice that will 
 I also defined a function named difference which will spot the number that's different among the 3 dice. This will help in making the other two numbers fixed and giving the user a chance to only roll the number that's different.
 I then accounted for every condition that the dice wil produce and what it will return if the condition is met.
 The empty list "Mylist" will store all the numbers that the dice produce and show in the termianl the numbers the user got and add up their total.
+Earlier I imported the library numpy which I use later to calculate the total of the 3 dice during the first roll and every time the user decides to reroll.
 If the numbers that the user got are all the same then they recieve zero points and their turn ends and they cannot reroll.
 If two of the numbers are the same no matter which dice it is (dice1 and dice2 or dice and dice3) they will be fixed and cannot be rolled but the number that's different can be.
 If none of the numbers are the same the user will be prompted to reroll all 3 dice if they choose to which is what the "while" loop is responsible for.
+The time library will keep track and display the local time of when the game starts and will keep updating when the user decides to reroll. It will also display the end time when the user chooses to end the game.
 If they decided to keep on rolling the game will only stop if all 3 numbers are the same or if they choose "n" when they're asked to reroll.
 
