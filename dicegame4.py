@@ -6,7 +6,7 @@ play_dice = input("Hello, welcome to my dice game! Press 1 to play! ")
 if play_dice == "1":
     print("Okay, rolling your dice! ")
     #Using time.strftime to show the time the game began
-    print("Game started at:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+    print("Game started at:", time.strftime("%Y-%m-%d %H:%M", time.localtime()))
 else: 
     print("An error occurred, goodbye!")
     quit()
@@ -53,7 +53,7 @@ else:
         print(f"Your first die was a {mylist[0]}, your second die was a {mylist[1]}, your third die was a {mylist[2]}.")
         print(f"Your total is {total}.")
         # Displaying current time
-        print("Current time:", time.strftime("%H:%M:%S", time.localtime()))  
+        print("Current time:", time.strftime("%H:%M", time.localtime()))  
     # Determine the different die
         diff_result = difference(mylist)
         # If all dice are the same
@@ -81,7 +81,7 @@ else:
                 print("You chose to stop. Final dice:", mylist)
                 print(f"Your final total is {total}.")
                 #Shows time of when the game ended
-                print("Game ended at:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+                print("Game ended at:", time.strftime("%Y-%m-%d %H:%M", time.localtime()))
                 break
         #If one die is different
         else:  
@@ -100,5 +100,5 @@ else:
             #The user doesn't want to reroll this will present their total and stop
                 print("No more rerolls. Final dice:", mylist)
                 print(f"Your final total is {total}.")
-                print("Game ended at:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+                print("Game ended at:", time.strftime("%Y-%m-%d %H:%M", time.localtime()))
                 break 
