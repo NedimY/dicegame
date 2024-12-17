@@ -65,7 +65,7 @@ else:
             if reroll_choice.lower() == "roll":
             #Reroll all dice
                 mylist = roll()  
-                #Recalculate the total
+                #Recalculate the total using numpy
                 total = np.sum(mylist)  
                 #Print the reroll from the list
                 print("After reroll:", mylist)
@@ -85,7 +85,7 @@ else:
                 #Reroll the different die
                 mylist[diff_result[1]] = random.randint(1, 6)
                   
-                #Recalculate the total
+                #Recalculate the total using numpy
                 total = np.sum(mylist)
                 print("After reroll:", mylist)
             else:
